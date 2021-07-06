@@ -47,18 +47,6 @@ app.prepare()
       const actualPage = '/';
       renderAndCache(req, res, actualPage);
     });
-    server.get('/monitoring', (req, res) => {
-      const actualPage = '/monitoring';
-      renderAndCache(req, res, actualPage);
-    });
-    server.get('/lab', (req, res) => {
-      const actualPage = '/lab';
-      renderAndCache(req, res, actualPage);
-    });
-    server.get('/collaboration', (req, res) => {
-      const actualPage = '/collaboration';
-      renderAndCache(req, res, actualPage);
-    });
     server.get('/publications', (req, res) => {
       const actualPage = '/publications';
       renderAndCache(req, res, actualPage);
@@ -173,7 +161,7 @@ app.prepare()
 
     server.listen(PORT, (err) => {
       if (err) throw err;
-      console.log(`GRD is running on port ${PORT}`);
+      console.log(`Next.js Template is running on port ${PORT}`);
     });
   })
   .catch((ex) => {

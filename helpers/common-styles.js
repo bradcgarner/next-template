@@ -1,83 +1,80 @@
 export const red =                    '#c12b5b';
-export const accentFontColor =        '#c12b5b';
-export const accentFontColorHover =   '#999';
 export const green =                  '#8bad33';
 export const greenDarker =            '#7d9b2d';
 export const greenLighter =           '#a2bd5b';
 export const gray =                   '#464143';
-export const purple =                 '#73308a';
 export const black =                  '#231f20';
-export const headerFontColor =        '#333';
-export const headerFontColorHover =   '#999';
-export const headerBackgroundColor =  'white';
 export const menuBackgroundColor =    '#eee';
 export const navHoverColor       =    '#ddd';
-export const globalFontColor =        '#333';
-export const globalHeaderColor =      '#444';
 export const mainHeaderColor =        green;
-export const fadedHeaderColor =       '#555';
 export const carouselDotColor =       '#bbb';
 export const carouselDotColorActive = '#717171';
 export const carouselArrowColor =     'white';
 export const consentFontColor =       '#fff';
-export const imageBackgroundColor =   '#ccc';
-export const modalHeaderColor =       green;
-export const cardHoverColor =         '#eee';
-export const modalBackground =        'rgba(0, 0, 0, 0.6)'
-export const tagsAndCatsListColor =   accentFontColor;
 export const fontOnColorColor =       'white';
 export const fontOnColorColorHover =  '#888';
-export const teamBackgroundColor   =  '#ddd';
-export const cardShadowColorRGB    =  '27, 39, 51';
 export const disabledButtonColor   =  '#ccc';
 export const warmGray1             =  '#6e6259';
 export const warmGray2             =  '#584e47';
 export const warmGray3             =  '#423a35';
 export const warmGray4             =  '#7c7169';
 
+export const accentFontColor =        '#73308a';
+export const accentFontColorHover =   '#8d798d';
+export const purple =                 '#73308a';
+export const purpleRGB =              '115,48,138';
+export const purpleDarker =           '#5c266e';
+export const purpleLighter =          '#8f59a1';
+export const headerFontColor =        accentFontColor;
+export const headerFontColorHover =   '#a28ba2';
+export const headerBackgroundColor =  '#fafafa';
+export const footerBackgroundColor =  '#fafafa';
+export const globalFontColor =        '#2a171c';
+export const globalHeaderColor =      '#3c2727';
+export const fadedHeaderColor =       '#4c414c';
+export const burgerMenuFontColor =    '#fff';
+export const burgerMenuFontColorHover = accentFontColorHover;
+export const imageBackgroundColor =   '#d8c7d8';
+export const modalHeaderColor =       accentFontColor;
+export const cardHoverColor =         '#f7f1f7';
+export const cardShadowColor =        '#2a17ac';
+export const cardShadowColorRGB =     '35,31,32';
+export const modalBackground =        'rgba(0, 0, 0, 0.6)';
+export const mediumGray =             '#8d798d';
+
 export const backgroundLight = 'background-color: #fff;';
-export const backgroundMid   = 'background-color: #fafafa;';
+export const backgroundMid   = 'background-color: #f8f9f9;';
 export const backgroundDark  = 'background-color: #e6e6e6;';
-export const backgroundVDark = 'background-color: #999;';
-export const backgroundBlack = `background-color: #555;`;
+export const backgroundVDark = 'background-color: #8d798d;';
+export const backgroundBlack = `background-color: ${purple};`;
+
 
 // this is in the Myers reset in _frame.js
 export const fontNormal = `
-  font-family: Open Sans, san-serif;
+  font-family: Source Sans Pro, sans-serif;
 `;
 export const fontFinePrint = `
   font-family: Open Sans Condensed, sans-serif;
 `;
-export const fontBlogMenu = `
-  font-family: Open Sans, san-serif;
-`;
-// font-family: Merriweather, serif
-// font-family: Arima Madurai, cursive
-// font-family: Open Sans Condensed, sans-serif
-// font-family: Bellefair, serif
-
-// this is in format-html.js
-export const fontBlog = `
-  font-family: Playfair Display, serif
-`;
 export const fontReading = `
-  ${fontBlog};
+  font-family: Nanum Gothic, sans-serif
 `;
-export const fontAuthor = fontReading;
+
 /* IMPORTANT! THIS GOES IN _FRAME.JS TO LOAD GOOGLE FONTS */
 const fontsToLoadArr = [
-  // 'Anton',
-  // 'Inconsolata',
-  'Playfair+Display', // publications
-  // 'Nanum+Gothic',
-  // 'Merriweather:300',
-  'Open+Sans:700', // normal
+  'Nanum+Gothic', // blog
+  'Source+Sans+Pro', // normal
+  'Open+Sans:700', // blog menu
   'Open+Sans+Condensed:300', // fine print
-  'Roboto', // ONLY needed to check meta tags
+  'Roboto', // ONLY to check meta tags!!!
+  // 'Anton',
+  // 'Playfair+Display',
+  // 'Inconsolata',// 'Merriweather:300',
   // 'Arima+Madurai:100',
   // 'Bellefair',
 ];
-export const fontsToLoad = fontsToLoadArr.join('%7C');
+export const fontsToLoad = fontsToLoadArr.join('%7C'); // encoded pipe | character
+
 
 export const section = `
   justify-content: space-between;
@@ -153,54 +150,10 @@ export const bigButtonHover =`
   color: #888;
 `;
 
-export const hotButton = `
-  ${_bigButton}
-  background-color: rgb(221, 0, 0);
-  color: #fff;
-`;
-
-export const hotButtonHover = `
-  border: 1px solid #ddd;
-  background-color: rgb(255, 0, 0);
-  color: #888;
-`;
-
-export const sidebarTitleCSS = `
-  overflow: hidden;
-  font-size: 14px;
-  color: ${accentFontColor};
-  padding: 20px 0 10px 0;
-  margin: 0;
-`;
-
-export const defQuoteStyle = `
-  font-size:   14px;
-  line-height: 18px;
-  text-align:  justify;
-  color:      #444;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  ${fontReading}
-`;
-
-export const defEmStyle = `
-  font-size: 16px;
-  color:    ${green};
-`;
 
 export const footerElementMargins = `
   margin: 0 20px 50px 20px;
 `;
-
-export const pubContent = `
-  flex-direction: column;
-  align-items: center;
-  width: 75%;
-  padding: 40px 20px;
-  margin-top: 75px;
-`;
-
-export const postContent = pubContent;
 
 export const pageContent = `
   flex-direction: column;
@@ -210,24 +163,72 @@ export const pageContent = `
   margin-top: 75px;
 `;
 
-export const pubContentInner = `
+export const pageContentInner = `
   flex-direction: column;
   min-height: 75vh;
   width: 100%;
   max-width: 800px;
 `;
 
-export const pageContentInner = pubContentInner;
+export const iconColorInactive = '#c7c8ca';
 
-export const pubTitle = `
+export const boxShadow = `box-shadow: rgba(${cardShadowColorRGB}, 0.3) 3px 3px 5px 0px;`
+
+export const headerCSS = `
   font-size: 30px;
   text-align: center;
-  color: #444;
+  color: ${headerFontColor};
+  margin-top: 15px;
+  margin-bottom: 15px;
 `;
 
-export const postTitle = pubTitle;
+export const sectionHeaderCSS = `
+  max-width: 500px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  border-bottom: 7px solid ${accentFontColor};
+`;
 
-export const sideBarBottomBarBreakpoint = 650;
+export const sectionSubheaderCSS = `
+  font-size: 30px;
+  color: ${accentFontColor};
+`;
+
+export const sectionSubheader2CSS = `
+  font-size: 24px;
+  color: ${accentFontColor};
+`;
+
+export const hotButton = `
+  ${_bigButton}
+  background-color: ${purple};
+  color: #fff;
+`;
+
+export const hotButtonHover = `
+  border: 1px solid #ddd;
+  background-color: rgba(${purpleRGB},0.8);
+`;
+
+export const consentButton = `
+  ${_bigButton}
+  background-color: ${purpleDarker};
+  border: 1px solid #ddd;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 35px;
+`;
+
+export const consentButtonHover = `
+  background-color: ${purpleLighter};
+`;
+
+export const pageTitle = `
+  font-size: 30px;
+  text-align: center;
+  color: ${globalHeaderColor};
+`;
 
 export const expandCompressStyle = `
   position: absolute;
@@ -238,4 +239,9 @@ export const expandCompressStyle = `
   width: 30px;
   justify-content: center;
   align-items: center;
+`;
+
+export const transparent = `
+  opacity: 0.1;
+  cursor: initial;
 `;

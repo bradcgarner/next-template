@@ -1,12 +1,13 @@
 import content       from '../helpers/content';
 import { 
-  postContent, 
-  postTitle, 
-  postContentInner } from '../helpers/common-styles';
+  pageTitle, 
+  pageContent,
+  pageContentInner} from '../helpers/common-styles';
 
-export default props => {
+export default function BlankContent(props) {
 
   const c = content._blank || {} ;
+  
   return <div className='content'>
       <h1 className='title'>
         {c.header}
@@ -16,14 +17,14 @@ export default props => {
        </div>    
     <style jsx>{`
     .content {
-      ${postContent}
+      ${pageContent}
       width: 100vw;
     }
     .content-inner {
-      ${postContentInner}
+      ${pageContentInner}
     }
     .title {
-      ${postTitle}
+      ${pageTitle}
     }
     `}</style>
   </div>

@@ -2,13 +2,13 @@ import Link               from 'next/link';
 import PrivacyModal       from './modal';
 import content            from '../../helpers/content';
 import { 
-  pageContentInner,
+  pageContent, 
+  pageTitle, 
+  pageContentInner, 
   accentFontColor,
-  accentFontColorHover,
-  postContent,
-  postTitle, 
-  fontReading }           from '../../helpers/common-styles';
-  
+  fontReading,
+  accentFontColorHover}   from '../../helpers/common-styles';
+
 export default props => {
 
   const toggleModal = typeof props.toggleModal === 'function' ? props.toggleModal : ()=>{} ;
@@ -238,7 +238,7 @@ export default props => {
       </div>    
     <style jsx>{`
     .content {
-      ${postContent}
+      ${pageContent}
       width: 100vw;
     }
     .content-inner {
@@ -247,7 +247,7 @@ export default props => {
       ${fontReading}
     }
     .title {
-      ${postTitle}
+      ${pageTitle}
     }
     ul, li {
       list-style-type: circle;

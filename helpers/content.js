@@ -2,7 +2,7 @@ import {
   EllipsisVAlt, 
   CaretUp
 } from '../components/graphics/icons';
-import { warmGray1, warmGray2, warmGray3, warmGray4 } from './common-styles';
+import { fontsToLoad } from './common-styles';
 /*
  * This file - with few, small exceptions - includes ALL "static" content for the Purple-Roof site, i.e. all content that is not a blog post or image or file.
  * Blog posts and images are in the CMS.
@@ -57,6 +57,57 @@ export default {
     // no alt tag for background image
     tagline: 'Green Roof Diagnostics provides unbiased, scientific research for the green infrastructure industry.',
     subTag: `We are a team of professionals of various backgrounds who share a common goal: to improve the understanding and effectiveness of green infrastructure through rigorous science.`,
+  },
+
+  contact: {
+    mainNav: {
+      barLabel:    'Contact', // label in header
+      burgerLabel: 'Contact Us',
+      pageHeader:  'Contact Us',
+      divHeader:   'Contact Us', // label on actual div
+      id:     'contact', // this is the id of the div for scrolling purposes.
+      link:   '/contact',
+      priority: 2, // 2nd to go
+    },
+    meta: {
+      // limit title to 55 characters
+      title:       'Contact Purple-Roof',
+      // limit description to 120-140 characters
+      //            1        10        20        30        40        50        60        70        80        90        100       110        120        130        140
+      description: 'Purple-Roof is a non-proprietary performance specification for a resilient green roof.',
+      url:         `${thisUrl}/contact`,
+      image:       'https://cdn.buttercms.com/8t6e9sjgTB6hfTBgIsox',
+      alt:         'Contact Purple-Roof',
+    },
+    fontsToLoad: fontsToLoad.slice(0,2),
+    // contact info is in the footer
+    info: {
+      buttonLabel: 'Contact Us',
+      address1:    '17416 Germanna Highway',
+      address2:    'Culpeper, VA 22701',
+      tel:         '1+540.881.0058',
+      mapUrl:      'https://www.google.com/maps/place/17416+Germanna+Hwy,+Culpeper,+VA+22701/@38.450847,-77.938673,17z/data=!3m1!4b1!4m5!3m4!1s0x89b42753cc4aeb5d:0x9ee3db7f5b221321!8m2!3d38.4508428!4d-77.936479',
+    },
+    placeholders: {
+      name: 'name',
+      email: 'name@email.com',
+      tel: '555.555.5555',
+      msg: 'How can we help you?',
+    },
+    submitButton: 'Send',
+    // success message that displays when user clicks send on contact us
+    success: {
+      header: 'Thanks for contacting us!',
+      message: [
+        'Check your email for an auto-generated confirmation of receipt.',
+        'One of our team members will contact you within 1 business day.',
+      ]
+    },
+    // failure message that displays if contact us is not successfull upon send
+    fail: {
+      header: 'Oops!',
+      message: 'Sorry, something went wrong.  Please try again. If this does not work, please email info@purple-roof.com.',
+    },
   },
 
   // privacy page and in footer. Note that this page is no-crawl

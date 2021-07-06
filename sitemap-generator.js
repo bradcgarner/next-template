@@ -21,5 +21,6 @@ const xmlString = staticXmlArr.join(' ');
 
 fs.writeFile('static/sitemap.xml', xmlString, function (err) {
   if (err) throw err;
+  // eslint-disable-next-line no-console
   console.log('Generated dynamic sitemap.xml');
 });
