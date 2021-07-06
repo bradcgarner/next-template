@@ -1,6 +1,6 @@
-import Frame              from '../components/_frame.js';
+import Frame              from '../components/_general/_frame.js';
 import content            from '../helpers/content';
-import BlankContent       from '../components/_blank-content';
+import BlankContent       from '../components/_general/_blank-content';
 
 export default class BlankPage extends React.Component {
   constructor(props){

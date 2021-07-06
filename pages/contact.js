@@ -1,8 +1,8 @@
-import Frame              from '../components/_frame.js';
-import ContactContent     from '../components/contact/content';
-import Modal              from '../components/modal';
+import Frame              from '../components/_general/_frame.js';
+import ContactContent     from '../components/contact/_main';
+import Modal              from '../components/_general/modal';
 import { getMeta }        from '../helpers/meta';
-import { fireNewPageView } from '../helpers/tag-manager.js';
+import { fireNewPageView } from '../helpers/browser/tag-manager.js';
 
 export default class Contact extends React.Component {
   constructor(props){

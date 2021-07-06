@@ -1,6 +1,6 @@
-import { modalBackground } from '../helpers/common-styles';
+import { modalBackground } from '../../helpers/common-styles';
 
-export default props => {
+export default function Modal(props) {
 
   const toggleModal = typeof props.toggleModal === 'function' ? props.toggleModal : ()=>{} ;
   

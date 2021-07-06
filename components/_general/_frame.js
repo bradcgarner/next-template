@@ -1,12 +1,12 @@
 import ReactDOM         from 'react-dom';
 import Head             from 'next/head';
 import ReactGA          from 'react-ga';
-import Header           from './header/header';
-import Footer           from './footer/footer';
+import Header           from '../header/_main';
+import Footer           from '../footer/_main';
 import { fontNormal, 
   fontsToLoad, 
-  globalFontColor }     from '../helpers/common-styles';
-import scrollFix        from '../helpers/scroll-fix';  // DO NOT DELETE! This mutates the window object; not invoked in this file
+  globalFontColor }     from '../../helpers/common-styles';
+import scrollFix        from '../../helpers/browser/scroll-fix';  // DO NOT DELETE! This mutates the window object; not invoked in this file
 
 // necessary to over-ride browser defaults for the root component
 const layoutStyle = {

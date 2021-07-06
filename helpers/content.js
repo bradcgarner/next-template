@@ -1,7 +1,7 @@
 import {
   EllipsisVAlt, 
   CaretUp
-} from '../components/graphics/icons';
+} from 'something-rather-iconic';
 import { fontsToLoad } from './common-styles';
 /*
  * This file - with few, small exceptions - includes ALL "static" content for the Purple-Roof site, i.e. all content that is not a blog post or image or file.

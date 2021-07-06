@@ -1,6 +1,6 @@
 import Link                from 'next/link';
 import { isObjectLiteral } from 'conjunction-junction';
-import Frame               from '../components/_frame.js';
+import Frame               from '../components/_general/_frame.js';
 import { siteMapStatic }   from '../helpers/sitemap-static';
 import content             from '../helpers/content';
 import { green }           from '../helpers/common-styles.js';

@@ -4,7 +4,7 @@ import {
   accentFontColorHover, 
   accentFontColor, 
   menuBackgroundColor } from '../../helpers/common-styles';
-import { navLink }      from '../../helpers/tag-manager';
+import { navLink }      from '../../helpers/browser/tag-manager';
 
 export default function Menu (props) {
 

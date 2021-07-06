@@ -2,7 +2,7 @@ import { modalCard,
   hotButton,
   hotButtonHover}     from '../../helpers/common-styles';
 
-export default props => {
+export default function PrivacyModal(props) {
 
   const message = props.message;
   const removeAllCookies = typeof props.removeAllCookies === 'function' ? props.removeAllCookies : ()=>{} ;

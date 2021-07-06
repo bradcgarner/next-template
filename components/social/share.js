@@ -25,7 +25,7 @@ import {
   shareWhatsapp, 
   shareWorkplace, 
   shareEmail, 
-  scrollPostBottom } from '../../helpers/tag-manager';
+  scrollPostBottom } from '../../helpers/browser/tag-manager';
 import { accentFontColorHover, sideBarBottomBarBreakpoint } from '../../helpers/common-styles';
 
 export default props => {

@@ -2,7 +2,7 @@ import { isObjectLiteral } from 'conjunction-junction';
 import LazyLoad            from 'react-lazyload';
 import { 
   accentFontColor, }      from '../../helpers/common-styles';
-import { oopsClick }      from '../../helpers/tag-manager';
+import { oopsClick }      from '../../helpers/browser/tag-manager';
 
 export default function HomeContent(props) {
 

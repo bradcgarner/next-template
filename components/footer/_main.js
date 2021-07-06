@@ -17,7 +17,7 @@ import { privacyOpen,
   phoneLink,
   privacyGoTo,
   scrollPageFooter,
-  navLink}              from '../../helpers/tag-manager';
+  navLink}              from '../../helpers/browser/tag-manager';
 
 export default props => {
 

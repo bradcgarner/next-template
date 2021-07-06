@@ -2,7 +2,7 @@ import Link                from 'next/link';
 import { isObjectLiteral } from 'conjunction-junction';
 import PRLogo              from '../graphics/logo-grd-color';
 import content             from '../../helpers/content';
-import { navLink }         from '../../helpers/tag-manager';
+import { navLink }         from '../../helpers/browser/tag-manager';
 import {
   headerBackgroundColor, 
   navHoverColor,

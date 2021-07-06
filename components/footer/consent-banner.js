@@ -5,7 +5,7 @@ import { hotButton,
   accentFontColor, 
   fontOnColorColor }       from '../../helpers/common-styles';
 import { privacyAll, 
-  privacyOpen }            from '../../helpers/tag-manager';
+  privacyOpen }            from '../../helpers/browser/tag-manager';
 
 export default props => {
 

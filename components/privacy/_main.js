@@ -9,7 +9,7 @@ import {
   fontReading,
   accentFontColorHover}   from '../../helpers/common-styles';
 
-export default props => {
+export default function PrivacyContent (props) {
 
   const toggleModal = typeof props.toggleModal === 'function' ? props.toggleModal : ()=>{} ;
 

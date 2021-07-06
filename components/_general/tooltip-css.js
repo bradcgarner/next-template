@@ -1,4 +1,4 @@
-export default () => {
+export default function TooltipCss() {
   return <div>
     <style >{`
         .tooltip {

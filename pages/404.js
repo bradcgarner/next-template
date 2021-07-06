@@ -1,20 +1,15 @@
-import Frame        from '../components/_general/_frame.js';
-import content      from '../helpers/content';
-import { getMeta }  from '../helpers/meta.js';
-import Router       from 'next/router';
-import { detect }   from 'detect-browser';
-import { fireNewPageView } from '../helpers/browser/tag-manager.js';
+import React               from 'react';
+import Router              from 'next/router';
+import { detect }          from 'detect-browser';
+import Frame               from '../components/_general/_frame';
+import { getMeta }         from '../helpers/meta';
+import { fireNewPageView } from '../helpers/browser/tag-manager';
 
-export default class Error extends React.Component {
-  static getInitialProps({ res, err }){
-    const statusCode = res ? res.statusCode : err ? err.statusCode : null ;
-    return {statusCode};
-  }
-
+export default class FourOFour extends React.Component {
   componentDidMount(){
     fireNewPageView();
     setTimeout(()=>{
-      Router.push('/')
+      Router.push('/');
     }, 4000);
   }
 
@@ -27,17 +22,14 @@ export default class Error extends React.Component {
     for(let key in browser){
       properties.push(<p key={key} style={{fontSize: 12, color: '#aaa', marginRight: 10}}>{key}: {browser[key]}</p>);
     }
-    const c = content.error || {} ;
     const meta = getMeta('error');
-
-    const message = this.props.statusCode === 404 ? c[404] : c.error ;
 
     return <Frame 
       hideHeader={false} 
       meta={meta} >
       <section className='section'>
-        <h1>{this.props.statusCode}</h1>
-        {message}
+        <h1>404</h1>
+        Sorry, but we did not find that page.
         <div className='properties'>
           {properties}
         </div>

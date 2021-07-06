@@ -9,7 +9,7 @@ import {
   accentFontColor,
   fontOnColorColorHover} from '../../helpers/common-styles';
 import { privacySave, 
-  privacyGoTo }          from '../../helpers/tag-manager';
+  privacyGoTo }          from '../../helpers/browser/tag-manager';
 import content           from '../../helpers/content';
 
 export default class ConsentExpanded extends React.Component {

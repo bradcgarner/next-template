@@ -11,7 +11,7 @@ import {
   followFacebook, 
   followLinkedin, 
   followTwitter, 
-  socialIconWrapper} from '../../helpers/tag-manager';
+  socialIconWrapper} from '../../helpers/browser/tag-manager';
 
 export default props => {
 
