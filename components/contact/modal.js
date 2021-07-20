@@ -3,7 +3,7 @@ import { modalCard,
   globalHeaderColor}     from '../../helpers/common-styles';
 import content           from '../../helpers/content';
 
-export default props => {
+export default function Modal(props) {
 
   const c = props.success ? 
     content.contact.success :

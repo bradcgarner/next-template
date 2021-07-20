@@ -1,4 +1,4 @@
-export default props => {
+export default function Logo2(props) {
   
   return <svg className='grd-logo' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 465 700'>
     <title>green-roof-diagnostics-icon</title>

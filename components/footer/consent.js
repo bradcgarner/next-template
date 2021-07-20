@@ -2,7 +2,7 @@ import ConsentExpanded    from './consent-expanded';
 import ConsentBanner      from './consent-banner';
 import { backgroundBlack } from '../../helpers/common-styles';
 
-export default props => {
+export default function Consent(props) {
 
   const consent = props.consent ? props.consent : {} ;
   const content = consent.expanded ? 

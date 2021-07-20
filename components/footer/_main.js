@@ -19,7 +19,7 @@ import { privacyOpen,
   scrollPageFooter,
   navLink}              from '../../helpers/browser/tag-manager';
 
-export default props => {
+export default function Footer(props) {
 
   const contact = content.contact || {} ;
   const info    = contact.info || {} ;

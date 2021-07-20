@@ -7,7 +7,7 @@ import { hotButton,
 import { privacyAll, 
   privacyOpen }            from '../../helpers/browser/tag-manager';
 
-export default props => {
+export default function ConsentBanner(props) {
 
   const c = content.privacy || {} ;
   const consent = c.consent || {} ;

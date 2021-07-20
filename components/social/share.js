@@ -28,7 +28,7 @@ import {
   scrollPostBottom } from '../../helpers/browser/tag-manager';
 import { accentFontColorHover, sideBarBottomBarBreakpoint } from '../../helpers/common-styles';
 
-export default props => {
+export default function Share(props) {
 
   const size  = 40;
   const round = true;

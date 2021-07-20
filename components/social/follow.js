@@ -13,7 +13,7 @@ import {
   followTwitter, 
   socialIconWrapper} from '../../helpers/browser/tag-manager';
 
-export default props => {
+export default function Follow(props) {
 
   const size  = 40;
   const round = true;
