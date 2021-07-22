@@ -1,7 +1,7 @@
 import Link                from 'next/link';
 import { isObjectLiteral } from 'conjunction-junction';
 import content             from '../../helpers/content';
-import GRDLogo             from '../graphics/logo-grd-color';
+import GRDLogo             from '../graphics/logo-lbg-color';
 import { 
   backgroundDark, 
   footerElementMargins, 
@@ -9,7 +9,7 @@ import {
   accentFontColor,
   fontOnColorColorHover,
   globalHeaderColor,
-  fontFinePrint}              from '../../helpers/common-styles';
+  fontFinePrint}              from '../../helpers/styles-all';
 import SocialFollow        from '../social/follow';
 import FooterConsent       from './consent';
 import { privacyOpen,

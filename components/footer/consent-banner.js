@@ -3,7 +3,7 @@ import { isObjectLiteral } from 'conjunction-junction';
 import { hotButton, 
   hotButtonHover, 
   accentFontColor, 
-  fontOnColorColor }       from '../../helpers/common-styles';
+  fontOnColorColor }       from '../../helpers/styles-all';
 import { privacyAll, 
   privacyOpen }            from '../../helpers/browser/tag-manager';
 

@@ -161,7 +161,7 @@ app.prepare()
 
     server.listen(PORT, (err) => {
       if (err) throw err;
-      console.log(`Next.js Template is running on port ${PORT}`);
+      console.log(`Living Building Group is running on port ${PORT}`);
     });
   })
   .catch((ex) => {

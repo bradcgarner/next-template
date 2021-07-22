@@ -1,6 +1,6 @@
 import ConsentExpanded    from './consent-expanded';
 import ConsentBanner      from './consent-banner';
-import { backgroundBlack } from '../../helpers/common-styles';
+import { backgroundBlack } from '../../helpers/styles-all';
 
 export default function Consent(props) {
 

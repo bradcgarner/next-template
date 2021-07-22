@@ -87,6 +87,14 @@ const monitoringFaqImage = 'monitoring-faq-image-1'; // -2, etc.
 
 // all the following are used as classes where socialIconWrapper is the class
 // format: action network
+export const followFacebook   = 'follow facebook';
+export const followInstagram  = 'follow instagram';
+export const followLinkedin   = 'follow linkedin';
+export const followPinterest  = 'follow pinterest';
+export const followSoundcloud = 'follow soundcloud';
+export const followTwitter    = 'follow twitter';
+export const followYoutube    = 'follow youtube';
+
 export const shareFacebook  = 'share facebook';
 export const shareLinkedin  = 'share linkedin';
 export const sharePinterest = 'share pinterest';
@@ -96,13 +104,4 @@ export const shareTwitter   = 'share twitter';
 export const shareWhatsapp  = 'share whatsapp';
 export const shareWorkplace = 'share workplace';
 export const shareEmail     = 'share email';
-
-// NOTE: follows are tracked as outbound links, not clicks
-export const followFacebook  = 'follow facebook';
-export const followLinkedin  = 'follow linkedin';
-export const followPinterest = 'follow pinterest';
-export const followReddit    = 'follow reddit';
-export const followTumblr    = 'follow tumblr';
-export const followTwitter   = 'follow twitter';
-export const followWorkplace = 'follow workplace';
 

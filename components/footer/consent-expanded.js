@@ -7,7 +7,7 @@ import {
   fontFinePrint,
   fontOnColorColor,
   accentFontColor,
-  fontOnColorColorHover} from '../../helpers/common-styles';
+  fontOnColorColorHover} from '../../helpers/styles-all';
 import { privacySave, 
   privacyGoTo }          from '../../helpers/browser/tag-manager';
 import content           from '../../helpers/content';

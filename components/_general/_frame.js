@@ -5,7 +5,7 @@ import Header           from '../header/_main';
 import Footer           from '../footer/_main';
 import { fontNormal, 
   fontsToLoad, 
-  globalFontColor }     from '../../helpers/common-styles';
+  globalFontColor }     from '../../helpers/styles-all';
 import scrollFix        from '../../helpers/browser/scroll-fix';  // DO NOT DELETE! This mutates the window object; not invoked in this file
 
 // necessary to over-ride browser defaults for the root component
@@ -18,7 +18,7 @@ export default class Frame extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      hideHeader:    typeof window !== 'undefined' && window.location && window.location.hash ? false : typeof this.props.hideHeader === 'boolean' ? this.props.hideHeader : true ,
+      hideHeader:    typeof window !== 'undefined' && window.location && window.location.hash ? false : typeof this.props.hideHeader === 'boolean' ? this.props.hideHeader : false ,
       scrolledTo:    0 ,
       triggerHeight: 400,
       meta: this.props.meta || {},

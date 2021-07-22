@@ -25,6 +25,8 @@ export const purple =                 '#73308a';
 export const purpleRGB =              '115,48,138';
 export const purpleDarker =           '#5c266e';
 export const purpleLighter =          '#8f59a1';
+export const purpleSlightlyLighter  = '#814495';
+
 export const headerFontColor =        accentFontColor;
 export const headerFontColorHover =   '#a28ba2';
 export const headerBackgroundColor =  '#fafafa';

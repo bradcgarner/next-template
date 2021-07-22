@@ -1,6 +1,6 @@
 import { modalCard, 
   accentFontColor, 
-  globalHeaderColor}     from '../../helpers/common-styles';
+  globalHeaderColor}     from '../../helpers/styles-all';
 import content           from '../../helpers/content';
 
 export default function Modal(props) {

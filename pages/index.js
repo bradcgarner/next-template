@@ -1,30 +1,23 @@
-import React           from 'react';
+import React, { useEffect } from 'react';
 import Frame           from '../components/_general/_frame';
-import Landing         from '../components/home/landing';
 import HomeContent     from '../components/home/_main';
 import content         from '../helpers/content';
 import { 
   fireNewPageView }    from '../helpers/browser/tag-manager';
 
-export default class Index extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-    };
-  }
+export default function Index() {
 
-  componentDidMount(){
-    fireNewPageView();
-  }
+  let ready;
 
-  render() {
-    return <Frame 
-      hideHeader={true} 
-      meta={content.index.meta}
-      toggleModal={this.toggleModal} >
-      <Landing />
-      <HomeContent/>
-    </Frame>
-  }
+  useEffect(()=>{
+    if(!ready){
+      fireNewPageView();
+      ready = true;
+    }
+  }, [ready])
 
-};
+  return <Frame meta={content.main.meta}>
+    <HomeContent/>
+  </Frame>
+
+}

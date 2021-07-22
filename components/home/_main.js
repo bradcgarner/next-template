@@ -1,33 +1,80 @@
-import { isObjectLiteral } from 'conjunction-junction';
-import LazyLoad            from 'react-lazyload';
 import { 
-  accentFontColor, }      from '../../helpers/common-styles';
+  accentFontColor, }      from '../../helpers/styles-all';
 import { oopsClick }      from '../../helpers/browser/tag-manager';
+import content            from '../../helpers/content';
+import Logo               from '../graphics/logo-lbg-color';
 
 export default function HomeContent(props) {
 
-  return <div className='content'>
-    <div className={`${oopsClick} headshot-in-content`}>
-      <LazyLoad>
-        <img className='image' src='' alt=''/>
-      </LazyLoad>
+  const contentCss = {
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: 120,
+  };
+
+  const landingLogoContainerCss = {
+    display: 'block',
+    width: '70vw',
+    maxWidth: 500,
+    marginBottom: 50,
+  };
+
+  const landingCategoriesContainerCss = {
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  };
+
+  const imageContainerCss = {
+    width: 250,
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: 25,
+    marginBottom: 50,
+  };
+
+  const imageCss = {
+    objectFit: 'contain',
+    width: '100%',
+  };
+
+  const h2Css = {
+    textAlign: 'center',
+    marginBottom: 20,
+  };
+
+  const main = content.main || {};
+  const mainMenu = Array.isArray(main.mainMenu) ?
+    main.mainMenu.map(category=>{
+      if(content[category] && content[category].meta){
+        return content[category].meta
+      }
+      return null;
+    }) : [];
+
+  return <div className='content' style={contentCss}>
+    <div className='landing-logo-container'
+      style={landingLogoContainerCss}>
+      <Logo />
     </div>
-    
-    <style jsx>{`
-    .content {
-      flex-direction: column;
-      align-items: center;
-      width: 44%;
-      border-radius: 2px;
-      padding: 40px 70px 0 70px;
-    }
-    .image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background-color: #ccc;
-    }
-    `}</style>
+    <div className='landing-categories-container'
+      style={landingCategoriesContainerCss}>
+      {
+        mainMenu.map((meta, i)=>{
+          return <div key={i} 
+            className='image-container'
+            style={imageContainerCss}>
+            <h2 className='h2'
+              style={h2Css}>
+              {meta.h1Tag}
+            </h2>
+            <img className='image'
+              style={imageCss}
+              src={meta.image}
+              alt={meta.alt} />
+          </div>
+        })
+      }
+    </div>
   </div>
 
   }

@@ -1,0 +1,45 @@
+User accounts
+
+Create an account
+  Enter user info & select which services
+	Submit to server
+	  Account = unpaid, unverified
+	Server sends email to validate email address
+  Validate email
+	  Account = unpaid, verified
+	Go directly to pay 
+	  Skip having to click buttons...
+		Within onApprove function
+		  Send to server that user is paid 
+			On server, verify that user in authToken = user name and id submitted
+			  If not, either programming error or attempted hack
+				  Notify Brad immediately
+				Display error notice
+      Add transactions as SQL subtable
+			Receive success from server 
+			Account = paid, verified
+			  Update local storage (same mechanism as login)
+
+On login
+  If account exists at all 
+	  Allow logout
+	Server sends instructions to update local storage
+
+	If...
+  Account = unverified
+	  Troubleshooting message 
+		Allow to create a new account
+	Account = unpaid
+	  Within X time (30 days)
+		  Allow to use paid features
+			Notice on login
+			Server sends email to user at 15, 25, 30 days
+		Beyond X time
+		  Account still exists, but no active features
+			Allow to pay and activate features
+			Send 1 email at 60 days after signup date
+	Account = paid & current 
+	  (server determines current via transactions subtable)
+	  Allow to use paid features
+	Account = not current 
+	  Same as unpaid
