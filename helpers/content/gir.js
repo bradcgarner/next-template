@@ -42,7 +42,7 @@ const gir = {
     },
   ],
 
-  livingWallSystems: {
+  livingWallMonitoring: {
     pageType: 'service',
     meta: {
       // limit seoTitle to 55 characters
@@ -52,7 +52,7 @@ const gir = {
       // limit description to 120-140 characters
       //            1        10        20        30        40        50        60        70        80        90        100       110        120        130        140
       description: 'Living Wall Monitoring and Control.',
-      path:        'living-walls',
+      path:        'living-wall-monitoring',
       image:       'https://cdn.buttercms.com/FRHkRLSkRUerv58OG5yS',
       alt:         'Living Wall Monitoring and Control',
     },
@@ -91,7 +91,7 @@ const gir = {
     ]
   },
 
-  greenRoofs: {
+  greenRoofMonitoring: {
     pageType: 'service',
     meta: {
       // limit seoTitle to 55 characters
@@ -101,7 +101,7 @@ const gir = {
       // limit description to 120-140 characters
       //            1        10        20        30        40        50        60        70        80        90        100       110        120        130        140
       description: 'Green Roof Monitoring and Control.',
-      path:        'green-roofs',
+      path:        'green-roof-monitoring',
       image:       'https://cdn.buttercms.com/FRHkRLSkRUerv58OG5yS',
       alt:         'Green Roof Monitoring and Control',
     },

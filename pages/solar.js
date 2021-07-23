@@ -2,11 +2,11 @@
 import React, 
 { useEffect, useState }    from 'react';
 import Frame               from '../components/_general/_frame';
-import Level2Content       from '../components/home/_main';
+import Level2Content       from '../components/level2/_main';
 import content             from '../helpers/content';
 import { fireNewPageView } from '../helpers/browser/tag-manager';
 
-export default function DiaSafePage() {
+export default function SolarPage() {
 
   const [ready, setReady] = useState(false);
 
@@ -17,12 +17,13 @@ export default function DiaSafePage() {
     }
   }, [ready])
 
-  const pageKey = 'diaSafe';
+  const pageKey = 'solar';
 
   return <Frame meta={content[pageKey].meta}>
-    <Level3Content 
-		  pageKey={pageKey}
-			pageType='product'/>
+    <Level2Content pageKey={pageKey}/>
+  </Frame>
+
+}			pageType='product'/>
   </Frame>
 
 }

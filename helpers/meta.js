@@ -1,25 +1,26 @@
 import { isObjectLiteral } from 'conjunction-junction';
-import content            from './content';
+import content             from './content';
+import sitemapHash         from './sitemap/sitemap-hash.json';
+
 const thisUrl = process.env.THIS_URL;
 
 export const getMeta = (pageKey, post) => {
-  const h = isObjectLiteral(content.home) ? content.home : {} ;
-  const metaDef = isObjectLiteral(h.meta) ? h.meta : {} ;
-  const thisPage = isObjectLiteral(content[pageKey]) ? content[pageKey] : {} ;
-  const metaThis = isObjectLiteral(thisPage.meta) ? thisPage.meta : {} ;
+  const home     = isObjectLiteral(content.home) ? content.home : {} ;
+  const metaHome = isObjectLiteral(home.meta) ? home.meta : {} ;
+  const metaPage = isObjectLiteral(sitemapHash[pageKey]) ? sitemapHash[pageKey] : {} ;
 
-  const url = post ? `${thisUrl}/publication/${post.slug}` : null ;
+  const postUrl = post ? `${thisUrl}/publication/${post.slug}` : null ;
   const metaPost = isObjectLiteral(post) ? {
     title:         post.seo_title,
     description:   post.meta_description,
-    url:           url,
+    url:           postUrl,
     image:         post.featured_image,
     alt:           post.slug,
   } : {} ;
   
   const meta = {
-    ...metaDef, 
-    ...metaThis, 
+    ...metaHome, 
+    ...metaPage, 
     ...metaPost, 
   };
   return meta;

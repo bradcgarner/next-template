@@ -2,11 +2,11 @@
 import React, 
 { useEffect, useState }    from 'react';
 import Frame               from '../components/_general/_frame';
-import Level2Content       from '../components/level2/_main';
+import Level3Content       from '../components/level2/_main';
 import content             from '../helpers/content';
 import { fireNewPageView } from '../helpers/browser/tag-manager';
 
-export default function GirPage() {
+export default function GreenRoofMonitoringPage() {
 
   const [ready, setReady] = useState(false);
 
@@ -17,10 +17,12 @@ export default function GirPage() {
     }
   }, [ready])
 
-  const pageKey = 'gir';
+  const pageKey = 'greenRoofMonitoring';
 
-  return <Frame meta={content[pageKey].meta}>
-    <Level2Content pageKey={pageKey}/>
+  return <Frame meta={content.gir[pageKey].meta}>
+    <Level3Content 
+		  pageKey={pageKey}
+			pageType='service'/>
   </Frame>
 
 }

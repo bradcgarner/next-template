@@ -13,13 +13,13 @@ const stormwater = {
     image:       'https://cdn.buttercms.com/FRHkRLSkRUerv58OG5yS',
     alt:         'Green Roofs for Stormwater',
 
-		changefreq: 'monthly',
+    changefreq: 'monthly',
     priority: '0.9'
   },
 
-	autoGenerateLevel2: true,
+  autoGenerateLevel2: true,
 	
-	level2TopElements: [ 
+  level2TopElements: [ 
     // Can be anything, but generally keep
     // minimal to display near top of page.
     {

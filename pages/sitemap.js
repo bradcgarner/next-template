@@ -6,6 +6,7 @@ import { getMeta }         from '../helpers/meta';
 import { fontsToLoad }     from '../helpers/styles-all';
 import SiteMapCard         from '../components/_general/sitemap-card';
 import Frame               from '../components/_general/_frame';
+import { fireNewPageView } from '../helpers/browser/tag-manager';
 
 export default function SiteMap() {
 
