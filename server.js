@@ -11,7 +11,7 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 // list the port after all imports
 const PORT = isPrimitiveNumber(parseInt(process.env.PORT, 10)) ? process.env.PORT : 8888 ;
-const sitemap = require('./sitemap-generator'); // do not invoke, just reference, and it runs
+const sitemap = require('./helpers/sitemap/sitemap-generator'); // do not invoke, just reference, and it runs
 const thisUrl = process.env.THIS_URL;
 
 // This is where we cache our rendered HTML pages

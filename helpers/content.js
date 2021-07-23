@@ -1,16 +1,18 @@
-import {contact}         from './content/contact';
-import {fallProtection}  from './content/fall-protection';
-import {gir}             from './content/gir';
-import {livingWalls}     from './content/living-walls';
-import {main}            from './content/_main';
-import {privacy}         from './content/privacy';
-import {solar}           from './content/solar';
-import {stormwater}      from './content/stormwater';
-import {trellis}         from './content/trellis';
-import {vegetation}      from './content/vegetation';
-import {error}           from './content/error';
-import {socialHandles}   from './content/social-handles';
-import {footer}          from './content/footer';
+'use strict';
+
+const {contact}         = require('./content/contact');
+const {fallProtection}  = require('./content/fall-protection');
+const {gir}             = require('./content/gir');
+const {livingWalls}     = require('./content/living-walls');
+const {home}            = require('./content/_main');
+const {privacy}         = require('./content/privacy');
+const {solar}           = require('./content/solar');
+const {stormwater}      = require('./content/stormwater');
+const {trellis}         = require('./content/trellis');
+const {vegetation}      = require('./content/vegetation');
+const {error}           = require('./content/error');
+const {socialHandles}   = require('./content/social-handles');
+const {footer}          = require('./content/footer');
 
 /*
  * This file - with few, small exceptions - includes ALL "static" content for the Purple-Roof site, i.e. all content that is not a blog post or image or file.
@@ -22,17 +24,12 @@ import {footer}          from './content/footer';
  * ALL OTHER COMMENTS ARE IN-LINE
  */
 
-
-const thisUrl = process.env.THIS_URL;
-const thisDomain = process.env.THIS_DOMAIN;
-
-export default {
-
+module.exports = {
   contact,
   fallProtection,
   gir,
   livingWalls,
-  main,
+  home,
   privacy,
   solar,
   stormwater,

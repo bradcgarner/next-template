@@ -2,7 +2,7 @@ import content       from '../../helpers/content';
 import { 
   pageTitle, 
   pageContent,
-  pageContentInner} from '../../helpers/common-styles';
+  pageContentInner} from '../../helpers/styles-all';
 
 export default function BlankContent(props) {
 

@@ -1,53 +1,47 @@
-import Frame              from '../components/_general/_frame.js';
-import ContactContent     from '../components/contact/_main';
-import Modal              from '../components/_general/modal';
-import { getMeta }        from '../helpers/meta';
+import React, 
+{ useEffect, useState }    from 'react';
+import Frame               from '../components/_general/_frame.js';
+import ContactContent      from '../components/contact/_main';
+import Modal               from '../components/_general/modal';
+import { getMeta }         from '../helpers/meta';
 import { fireNewPageView } from '../helpers/browser/tag-manager.js';
 
-export default class Contact extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      modal:        false,
-      modalContent: null,
-    };
-    this.toggleModal = this.toggleModal.bind(this);
-  }
+export default function ContactPage(props) {
+  const [modal, setModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [ready, setReady] = useState(false);
 
-  componentDidMount(){
-    fireNewPageView();
-  }
-  
-  toggleModal(modalContent) {
-    this.setState({
-      modal: !this.state.modal,
-      modalContent,
-    });
-  }
+  const toggleModal = modalContent => {
+    setModal(!modal)
+    setModalContent(modalContent);
+  };
 
-  render(){
+  useEffect(()=>{
+    if(!ready){
+      fireNewPageView();
+      setReady(true);
+    }
+  }, [ready])
 
-    const meta = getMeta('contact');
+  const meta = getMeta('contact');
 
-    const modal = !this.state.modal ? null :
-    <Modal 
-      toggleModal={this.toggleModal}
-      content={this.state.modalContent}/> ;
-
-    return <Frame 
-      hideHeader={false} 
-      meta={meta} >
-      <section className='section'>
-        <ContactContent toggleModal={this.toggleModal}/>
-        <style jsx>{`
-          .section {
-            flex-direction: column;
-            align-items: center;
-            width: 100vw;
-          }
-        `}</style>
-      </section>
-      {modal}
-    </Frame>
-  }
+  return <Frame 
+    hideHeader={false} 
+    meta={meta} >
+    <section className='section'>
+      <ContactContent toggleModal={toggleModal}/>
+      <style jsx>{`
+        .section {
+          flex-direction: column;
+          align-items: center;
+          width: 100vw;
+        }
+      `}</style>
+    </section>
+    {modal ?
+      <Modal 
+        toggleModal={toggleModal}
+        content={modalContent}/> : null 
+    }
+  </Frame>
 }

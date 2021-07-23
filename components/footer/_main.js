@@ -1,7 +1,7 @@
 import Link                from 'next/link';
 import { isObjectLiteral } from 'conjunction-junction';
 import content             from '../../helpers/content';
-import GRDLogo             from '../graphics/logo-lbg-color';
+import Logo             from '../graphics/logo-lbg-color';
 import { 
   backgroundDark, 
   footerElementMargins, 
@@ -22,9 +22,9 @@ import { privacyOpen,
 export default function Footer(props) {
 
   const contact = content.contact || {} ;
-  const info    = contact.info || {} ;
+  const info    = contact.info    || {} ;
   const privacy = content.privacy || {} ;
-  const footer  = content.footer || {} ;
+  const footer  = content.footer  || {} ;
 
   const win = typeof window !== 'undefined' ? window : {} ;
   const path = win.location && win.location.pathname ? win.location.pathname : '' ;
@@ -32,7 +32,7 @@ export default function Footer(props) {
 
   const locationDiv = <div className='location'>
     <div className={`${oopsClick} footer logo-in-footer true`} >
-      <GRDLogo outline={true}/>
+      <Logo />
     </div>
     <address className={`${oopsClick} footer address true`}>
       <p className='address-line'>

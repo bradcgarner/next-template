@@ -46,12 +46,10 @@ export default function Header(props) {
   }
 
   const localScrollToTop = () => {
-    this.setState({
-      menuHidden: true,
-      menuHiddenPrivate: true,
-    });
+    setMenuHidden(true);
+    setMenuHiddenPrivate(true);
     scrollToTop();
-  }
+  };
  
   const privateClass = hasAuthToken ? 'not-private' : 'private';
   const paidClass = props.hasSubscription ? 'not-paid' : 'paid';
@@ -79,7 +77,7 @@ export default function Header(props) {
   const homeAndLogoCss = {
     display: 'block',
     alignSelf: 'center',
-    width: '130px',
+    width: 100,
     marginLeft: '15px',
     cursor: 'pointer',
   };

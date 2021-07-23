@@ -1,22 +1,23 @@
-import React, { useEffect } from 'react';
-import Frame           from '../components/_general/_frame';
-import HomeContent     from '../components/home/_main';
-import content         from '../helpers/content';
+import React, 
+{ useEffect, useState }    from 'react';
+import Frame               from '../components/_general/_frame';
+import HomeContent         from '../components/home/_main';
+import content             from '../helpers/content';
 import { 
-  fireNewPageView }    from '../helpers/browser/tag-manager';
+  fireNewPageView }        from '../helpers/browser/tag-manager';
 
 export default function Index() {
 
-  let ready;
+  const [ready, setReady] = useState(false);
 
   useEffect(()=>{
     if(!ready){
       fireNewPageView();
-      ready = true;
+      setReady(true);
     }
   }, [ready])
 
-  return <Frame meta={content.main.meta}>
+  return <Frame meta={content.home.meta}>
     <HomeContent/>
   </Frame>
 

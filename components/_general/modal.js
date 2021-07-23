@@ -1,4 +1,4 @@
-import { modalBackground } from '../../helpers/common-styles';
+import { modalBackground } from '../../helpers/styles-all';
 
 export default function Modal(props) {
 

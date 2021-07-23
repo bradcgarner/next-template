@@ -26,7 +26,7 @@ import {
   shareWorkplace, 
   shareEmail, 
   scrollPostBottom } from '../../helpers/browser/tag-manager';
-import { accentFontColorHover, sideBarBottomBarBreakpoint } from '../../helpers/common-styles';
+import { accentFontColorHover, sideBarBottomBarBreakpoint } from '../../helpers/styles-all';
 
 export default function Share(props) {
 

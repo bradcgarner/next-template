@@ -7,7 +7,7 @@ import {
   hotButton,
   hotButtonHover,
   disabledButtonColor,
-  purple }                from '../../helpers/common-styles';
+  purple }                from '../../helpers/styles-all';
 import ContactModal       from './modal';
 import { detect }         from 'detect-browser';
 

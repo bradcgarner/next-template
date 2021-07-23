@@ -7,7 +7,7 @@ import {
   pageContentInner, 
   accentFontColor,
   fontReading,
-  accentFontColorHover}   from '../../helpers/common-styles';
+  accentFontColorHover}   from '../../helpers/styles-all';
 
 export default function PrivacyContent (props) {
 

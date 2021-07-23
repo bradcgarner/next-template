@@ -1,6 +1,6 @@
 import { modalCard, 
   hotButton,
-  hotButtonHover}     from '../../helpers/common-styles';
+  hotButtonHover}     from '../../helpers/styles-all';
 
 export default function PrivacyModal(props) {
 

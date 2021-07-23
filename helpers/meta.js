@@ -2,10 +2,10 @@ import { isObjectLiteral } from 'conjunction-junction';
 import content            from './content';
 const thisUrl = process.env.THIS_URL;
 
-export const getMeta = (page, post) => {
+export const getMeta = (pageKey, post) => {
   const h = isObjectLiteral(content.home) ? content.home : {} ;
   const metaDef = isObjectLiteral(h.meta) ? h.meta : {} ;
-  const thisPage = isObjectLiteral(content[page]) ? content[page] : {} ;
+  const thisPage = isObjectLiteral(content[pageKey]) ? content[pageKey] : {} ;
   const metaThis = isObjectLiteral(thisPage.meta) ? thisPage.meta : {} ;
 
   const url = post ? `${thisUrl}/publication/${post.slug}` : null ;

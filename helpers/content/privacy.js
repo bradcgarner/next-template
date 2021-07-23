@@ -1,7 +1,9 @@
-export const privacy = {
-	meta: {
+'use strict';
+
+const privacy = {
+  meta: {
     // limit seoTitle to 55 characters
-		//         1       10         20         30         40         50
+    //         1       10         20         30         40         50
     seoTitle: 'Living Building Group Privacy Policy',
     h1Tag:    'Living Building Group Privacy Policy',
     // limit description to 120-140 characters
@@ -10,6 +12,9 @@ export const privacy = {
     path:        'privacy',
     image:       'https://cdn.buttercms.com/FRHkRLSkRUerv58OG5yS',
     alt:         'Living Building Group Privacy Policy',
+
+    changefreq: 'yearly',
+    priority: '0.1'
   },
 
   privacy: {
@@ -30,4 +35,8 @@ export const privacy = {
     header: 'Privacy Policy',
   },
 
+};
+
+module.exports = {
+  privacy,
 };

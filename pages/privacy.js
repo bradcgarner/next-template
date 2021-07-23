@@ -1,53 +1,50 @@
-import Frame              from '../components/_general/_frame.js';
-import Modal              from '../components/_general/modal';
-import PrivacyContent     from '../components/privacy/_main';
-import { getMeta }        from '../helpers/meta';
+import React, 
+{ useEffect, useState }    from 'react';
+import Frame               from '../components/_general/_frame.js';
+import Modal               from '../components/_general/modal';
+import PrivacyContent      from '../components/privacy/_main';
+import { getMeta }         from '../helpers/meta';
 import { fireNewPageView } from '../helpers/browser/tag-manager.js';
 
-export default class Privacy extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      modal:        false,
-      modalContent: null,
-    };
-    this.toggleModal = this.toggleModal.bind(this);
-  }
+export default function PrivacyPage(props) {
 
-  toggleModal(modalContent) {
-    this.setState({
-      modal: !this.state.modal,
-      modalContent,
-    });
-  }
+  const [modal, setModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [ready, setReady] = useState(false);
 
-  componentDidMount(){
-    fireNewPageView();
-  }
-  
-  render(){
+  useEffect(()=>{
+    if(!ready){
+      fireNewPageView();
+      setReady(true);
+    }
+  }, [ready])
 
-    const meta = getMeta('privacy');
+  const toggleModal = modalContent => {
+    setModal(!modal)
+    setModalContent(modalContent);
+  };
 
-    const modal = !this.state.modal ? null :
-    <Modal 
-      toggleModal={this.toggleModal}
-      content={this.state.modalContent}/> ;
 
-    return <Frame 
-      hideHeader={false} 
-      meta={meta} >
-      <section className='section'>
-        <PrivacyContent toggleModal={this.toggleModal}/>
-        <style jsx>{`
-          .section {
-            display: flex;
-            flex-direction: row;
-            width: 100vw;
-          }
-        `}</style>
-      </section>
-      {modal}
-    </Frame>
-  }
+
+  const meta = getMeta('privacy');
+
+  return <Frame 
+    hideHeader={false} 
+    meta      ={meta} >
+    <section className='section'>
+      <PrivacyContent toggleModal={toggleModal}/>
+      <style jsx>{`
+        .section {
+          display: flex;
+          flex-direction: row;
+          width: 100vw;
+        }
+      `}</style>
+    </section>
+    {modal ?
+      <Modal 
+        toggleModal={toggleModal}
+        content={modalContent}/> : null 
+    }
+  </Frame>
 }

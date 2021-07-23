@@ -42,9 +42,9 @@ export default function HomeContent(props) {
     marginBottom: 20,
   };
 
-  const main = content.main || {};
-  const mainMenu = Array.isArray(main.mainMenu) ?
-    main.mainMenu.map(category=>{
+  const home = content.home || {};
+  const mainMenu = Array.isArray(home.mainMenu) ?
+    home.mainMenu.map(category=>{
       if(content[category] && content[category].meta){
         return content[category].meta
       }
