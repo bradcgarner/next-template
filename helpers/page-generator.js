@@ -46,6 +46,7 @@ export default function ${titleCaseWord(level2PageKey)}Page() {
     });
 
     for(let level3PageKey in level2Page){
+      console.log(level2PageKey,'>>>',level3PageKey)
       const possibleLevel3Page = level2Page[level3PageKey];
       if(possibleLevel3Page.meta && possibleLevel3Page.pageType){
         const level3Meta = possibleLevel3Page.meta;
